@@ -1,0 +1,17 @@
+.container {
+    font-family: 'Roboto', sans-serif;
+}
+.jumbotron {
+    height: 100px;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: darkslategray;
+}
+
+h1 {
+    text-align: center;
+}
+
+th {
+    color: blue;
+}
