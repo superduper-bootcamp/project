@@ -19,37 +19,28 @@
 <div class="container">
     
     <div class="jumbotron">
-        <h1>GeoNames Demo Output</h1>
+        <h1>Your Destination. Your Information.</h1>
     </div>
-
+   
     <!-- Placeholder code for the country selector -->
 
-    <div class="col-md-12">
-
-        <div class="row">
-            <h4>The following selector is auto-populated through an API call to the GeoNames database.</h4>
-        </div>
-    
-        <div class="row well forms-horizontal" id="countrySelect">        
+    <div class="col-md-12" id="searchBox">
+        <!-- The following search box and button will return all possible city name matches in the world +/- country selector -->
+        <div id="searchBars">
+            <input type="text" id= "cityName" name="cityName">
+            <input type="button" id="cityName-button" value="Submit">
+            <input type="button" id="clearSearch-button" value="Clear">
+            
+        <!-- The following selector is auto-populated through an API call to the GeoNames database -->
             <select id="country" disabled="disabled">
             </select>
         </div>
-    
-    <br>
-    <br>
-
-    <!-- Code to input a city name to search -->
-    <div class="row">
-        <h4>The following search box and button will return all possible city name matches in the world.</h4>
-        <br>
-        <input type="text" id= "cityName" name="cityName">
-        <input type="button" id="cityName-button" value="Submit">
-        <input type="button" id="clearSearch-button" value="Clear">
     </div>
     <br>
+   
     <!-- This returns the number of search results-->    
-    <div class="row">
-        <h5 id="resultsText"></h4>
+   <div class="row">
+        <h5 id="resultsText"></h5>
     </div>
     <br>
 
