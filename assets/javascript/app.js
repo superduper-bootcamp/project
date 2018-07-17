@@ -1,14 +1,12 @@
-console.log("start of app.js");
+// This is JS code for the project by team SuperDuper! July 5, 2018 -->
+// UofT SCS Coding Bootcamp
+
 $(document).ready(function () {
   // Declaration of GLOBAL VARIABLES that will be available throughout the application
   var countryCode = "";
   var countReturnedRows = 0;
   var cityName = "";
-
   
-
-
-
   // Initialize Firebase with superduper-team-project credentials
   var config = {
     apiKey: "AIzaSyBFIjYm2V3clPAGbA2I4Ak_XaLo4587s6s",
@@ -80,9 +78,10 @@ $(document).ready(function () {
         var wikiUrl = "https://en.wikipedia.org/wiki/";
         var locationChoice = (val.toponymName + ",_" + val.adminName1);
         wikiUrl = wikiUrl + locationChoice;
+        
         var select = $("<td>").text(wikiUrl);
-
-        // TODO: Build a function so that the user can click on the wikipage url
+      
+        // TODO: Build a function so that the user can click on the wikipage url  
         countReturnedRows++;
           
         $("#resultsText").text("There are " + countReturnedRows + " possible matches for: " + "'" + cityName + "'");
@@ -92,9 +91,11 @@ $(document).ready(function () {
         tRow.append(toponymName, adminName1, countryName, population, select);
         // Append the table row to the table body
         tBody.append(tRow);
-          
+
+         
       }
     }) 
+
   // This code will clear the search box and table when the clear button is pressed
   $('#clearSearch-button').on('click', function (event) {
     event.preventDefault();
@@ -106,8 +107,5 @@ $(document).ready(function () {
     
   });
   })
-
-   
-
 })
 
