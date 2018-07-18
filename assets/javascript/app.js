@@ -74,12 +74,15 @@ $(document).ready(function () {
         var lng = $("<td>").text(val.lng);
 
         // Build the url for the wikipedia reference
-        // console.log(locationChoice);
+
         var wikiUrl = "https://en.wikipedia.org/wiki/";
         var locationChoice = (val.toponymName + ",_" + val.adminName1);
         wikiUrl = wikiUrl + locationChoice;
-        
-        var select = $("<td>").text(wikiUrl);
+        var select = $("<td>");
+        var link = $("<a>").attr("href",wikiUrl);
+        link.attr("target", "_blank");
+        link.text("Click me");
+        select.append(link);
       
         // TODO: Build a function so that the user can click on the wikipage url  
         countReturnedRows++;
